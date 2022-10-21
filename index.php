@@ -36,6 +36,19 @@
                 } else{
                     while($mensagem = $consulta_mensagens -> fetch_assoc()){
                         if($mensagem['quantidade'] == 0){
+            ?>
+                <div class="card margin" style="width: 18rem;">
+                        <img class="card-img-top" src="<?php echo $mensagem['arquivo'] ?>" alt="Card image cap" >
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $mensagem['nome'];?></h5>
+                            <p class="card-text"><?php echo $mensagem['descricao'];?></p>
+                            <p>Quantidade disponível: <?php echo $mensagem['quantidade'];?></p>
+                        <p>Preço: <?php echo ($mensagem['preco'])?></p>
+                        <a href="pedidos.php?id_produto=<?php echo $mensagem['id_lanche']?>" class="btn btn-primary">Solicitar</a>
+                        </div>
+                        
+                </div>
+            <?php                                      
 
                         }else{
 
