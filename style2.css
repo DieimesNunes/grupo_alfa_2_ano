@@ -1,0 +1,67 @@
+button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(76, 110, 248);
+    color: aliceblue;
+    border-radius: 40px;
+    font-size: 30px;
+}
+
+.numero-input{
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 0.05px solid gray;
+    vertical-align: super;
+}
+
+button:hover{
+    background-color: rgb(39, 43, 169);
+
+}
+
+.caixa{
+    width: 300px;
+    text-align: justify;
+    height: 80px;
+    overflow: scroll;
+    padding: 14px;
+    overflow-x: hidden;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(180, 180, 180);
+    
+  }
+
+  .font{
+    font-size:  25px;
+    margin: 30px;
+  }
+
+.pdg{
+    padding: 10px;
+}
+
+.shesh{
+    margin-top: 10px;
+}

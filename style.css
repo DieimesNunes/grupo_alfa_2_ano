@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&display=swap');
+
+.center{
+    text-align: center;
+}
+
+.font{
+ font-family: 'Mulish';
+}
+
+.margintop{
+    margin-top: 20px;
+}
+
+.margin{
+    margin: 10px;
+}
+
+.h1{
+    text-align: center;
+}
+
+.text-center img{
+    margin-bottom: 30px;
+}
