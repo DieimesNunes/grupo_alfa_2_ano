@@ -15,15 +15,6 @@
 
     $quantidade_mensagens = $consulta_mensagens->num_rows;
 
-
-    //var_dump ($_POST);
-    /*
-    if(isset($_POST)){
-        var_dump ($_POST);
-
-    }
-    */
-
     if (isset($_POST)){
         
        foreach ($_POST as $indice => $valor){ 
@@ -45,34 +36,6 @@
         unset($deu_certo); 
         
        }
-
-        
-           
-
-        /*
-        $nome = $_POST["bt_nome"];
-        $email = $_POST["bt_email"];
-        $produto = $_POST["bt_produto"];        
-        $pedido = $_POST["bt_pedido"];        
-
-        
-        $sql_code = "UPDATE pedido
-        SET nome = '$nome', 
-        email = '$email',
-        produto = '$produto',
-        pedido = '$pedido'        
-        WHERE id_pedido = '$id_pedido'";
-
-        $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
-
-        if($deu_certo) {
-            $selecionar_pedido = "SELECT * FROM pedido WHERE id_pedido = $id_pedido ";
-            $retorno_consulta = $mysqli->query( $selecionar_pedido) or die($mysqli->error);
-            $pedido = $retorno_consulta -> fetch_assoc();
-            $_SESSION['resultado'] = "<div class='alert alert-success'>Pedido alterado </div>";
-            unset($_POST);            
-        }
-        */
     }
 ?>
 <!DOCTYPE html>
