@@ -35,7 +35,7 @@
             <?php
                 } else{
                     while($mensagem = $consulta_mensagens -> fetch_assoc()){
-                        if($mensagem['quantidade'] == 0){                                    
+                        if($mensagem['quantidade'] == 0 ){                                    
                         }else{
 
                         
