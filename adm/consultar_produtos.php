@@ -28,22 +28,23 @@
 <body>
     
 
-<div class="container pdg">
-    
+    <div class="container pdg">
+        <form action="">
         <input  class="btn btn-primary" type="submit" name="someAction" value="Atualizar" />
+        </form>
+        
     
     <table class="table shesh">
         <thead>
-        <tr>
-      <th scope="col" class="table-light">Consultar</th>
-      <th scope="col" class="table-light">Arquivo Foto</th>
-      <th scope="col" class="table-light">Descrição</th>
-      <th scope="col" class="table-light">Preço</th>
-      <th scope="col" class="table-light text">Quantidade</th>
-        </tr>
-    </thead>
-    <p></p>
-    <tbody>
+            <tr>
+                <th scope="col" class="table-light">Consultar</th>
+                <th scope="col" class="table-light">Arquivo Foto</th>
+                <th scope="col" class="table-light">Descrição</th>
+                <th scope="col" class="table-light">Preço</th>
+                <th scope="col" class="table-light text">Quantidade</th>
+            </tr>
+        </thead>        
+        <tbody>
         <?php
             $voltar = "../";
             
@@ -80,9 +81,9 @@
             }
         ?>
     </tbody>
-</table>
+    </table>
 
-</div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous"></script>        
     <script src="script.js"></script>
