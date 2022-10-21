@@ -4,6 +4,9 @@
     include("..\conexao.php");
     include("..\icon.php");
 
+    if(!isset($_SESSION)){
+        session_start();
+    }
   
 
     $sql_mensagens = "SELECT * FROM tabela_produtos";
@@ -21,8 +24,28 @@
     }
     */
 
-    if (isset($_POST['btn_quantidade1'])){
+    if (isset($_POST)){
         
+       foreach ($_POST as $indice => $valor){ 
+            $quantidade = $valor;
+
+            $sql_code = "UPDATE tabela_produtos
+            SET quantidade = '$quantidade'
+            WHERE id_lanche = '$indice'";
+
+            $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
+       }
+
+       if(!empty($deu_certo)){
+        $sql_mensagens = "SELECT * FROM tabela_produtos";
+        $consulta_mensagens = $mysqli->query ( $sql_mensagens) or die ($mysqli->error);
+        $quantidade_mensagens = $consulta_mensagens->num_rows;
+        $_SESSION['resultado'] = "<div class='alert alert-success'>Produtos alterados com sucesso. </div>";
+        unset($_POST); 
+        unset($deu_certo); 
+        
+       }
+
         
            
 
@@ -68,6 +91,12 @@
         <div class="container pdg">
             <form action="" method="post">
                 <input  class="btn btn-primary" type="submit"  value="Atualizar" />
+                <?php
+                    if(isset($_SESSION['resultado'])){
+                        echo $_SESSION['resultado']; 
+                        unset($_SESSION['resultado']);                   
+                    }
+                ?>
 
                 <table class="table shesh">
                     <thead>
@@ -95,7 +124,7 @@
                                     
                                                                     
                                     $contador = $contador + 1;
-                                    $name_btn["$contador"] = "btn_quantidade" . $contador;
+                                    $name_btn["$contador"] = $mensagem['id_lanche'];
                                     $img = $voltar.$mensagem['arquivo'];                
                         ?>
                         <tr>
@@ -108,9 +137,9 @@
                             </td>
                             <td class="font"><?php echo $mensagem['preco'];?></td>
                             <td class="sss">                               
-                                <!--  <button class="decrement" class="botao" >-</button> Ver isso aqui -->
-                                <input name="<?php echo  $name_btn[$contador]; ?>" type="number" class="numero-input" min="-1" max="100" step="1" value="0" class="my-input"> <!-- Têm duas class aqui ? -->
-                                <!--  <button class="increment" class="botao" >+</button>  -->            
+                                <button type="button" class="decrement" class="botao" >-</button> 
+                                <input name="<?php echo  $name_btn[$contador]; ?>" type="number" class="numero-input" min="-1" max="100" step="1" value="<?php echo $mensagem['quantidade']; ?>" class="my-input"> <!-- Têm duas class aqui ? -->
+                                <button type="button" class="increment" class="botao" >+</button>           
                             </td>
                         </tr>
 
@@ -120,59 +149,12 @@
                     ?>
                     </tbody>
                 </table>
-            </form>        
+            </form>       
         
             
-<<<<<<< HEAD
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
         crossorigin="anonymous"></script>        
-        <!--  <script src="script.js"></script> 
+        <script src="script.js"></script> 
     </body>
-=======
-            
-            if($quantidade_mensagens == 0){
-        ?>  <p>Nenhum produto foi cadastrado</p>
-
-        <?php
-                } else{
-                    $d = 1;
-                   
-                    while($mensagem = $consulta_mensagens -> fetch_assoc()){
-                    $img = $voltar.$mensagem['arquivo'];
-             
-        ?>
-            <tr>
-                <th scope="row"><?php echo $mensagem['nome'];?></th>
-                <td><a target="_blank" href="<?php echo $img ?>"><?php echo $mensagem['arquivo']; ?></a></td>
-                <td> 
-                    <div class="caixa">
-                        <?php echo $mensagem['descricao'];?>
-                    </div>
-                </td>
-                <td class="font"><?php echo $mensagem['preco'];?></td>
-                <td class="sss">                               
-                    <button class="decrement" class="botao" >-</button>
-                    <input type="number" class="numero-input" min="-1" max="100" step="1" value="0" class="my-input">
-                    <button class="increment" class="botao" >+</button>             
-                </td>
-            </tr>
-
-        <?php
-                }
-            }
-        ?>
-
-        <?php 
-                
-        ?>
-    </tbody>
-</table>
-
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-    crossorigin="anonymous"></script>        
-    <script src="script.js"></script>
-</body>
->>>>>>> PIv5.1
 </html>
