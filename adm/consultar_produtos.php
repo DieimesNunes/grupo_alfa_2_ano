@@ -123,9 +123,56 @@
             </form>        
         
             
+<<<<<<< HEAD
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
         crossorigin="anonymous"></script>        
         <!--  <script src="script.js"></script> 
     </body>
+=======
+            
+            if($quantidade_mensagens == 0){
+        ?>  <p>Nenhum produto foi cadastrado</p>
+
+        <?php
+                } else{
+                    $d = 1;
+                   
+                    while($mensagem = $consulta_mensagens -> fetch_assoc()){
+                    $img = $voltar.$mensagem['arquivo'];
+             
+        ?>
+            <tr>
+                <th scope="row"><?php echo $mensagem['nome'];?></th>
+                <td><a target="_blank" href="<?php echo $img ?>"><?php echo $mensagem['arquivo']; ?></a></td>
+                <td> 
+                    <div class="caixa">
+                        <?php echo $mensagem['descricao'];?>
+                    </div>
+                </td>
+                <td class="font"><?php echo $mensagem['preco'];?></td>
+                <td class="sss">                               
+                    <button class="decrement" class="botao" >-</button>
+                    <input type="number" class="numero-input" min="-1" max="100" step="1" value="0" class="my-input">
+                    <button class="increment" class="botao" >+</button>             
+                </td>
+            </tr>
+
+        <?php
+                }
+            }
+        ?>
+
+        <?php 
+                
+        ?>
+    </tbody>
+</table>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>        
+    <script src="script.js"></script>
+</body>
+>>>>>>> PIv5.1
 </html>
