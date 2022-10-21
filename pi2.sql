@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 05-Out-2022 às 13:03
+-- Tempo de geração: 21-Out-2022 às 12:07
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `tabela_produtos` (
   `id_lanche` int(11) NOT NULL AUTO_INCREMENT,
   `preco` varchar(100) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_lanche`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `tabela_produtos`
@@ -127,7 +127,7 @@ INSERT INTO `tabela_produtos` (`nome`, `quantidade`, `arquivo`, `tipo`, `descric
 ('Doce de brigadeiro', 0, 'lanches/632a20bc17692.jpg', 'Alimento', 'O brigadeiro Ã© um doce genuinamente brasileiro. Um orgulho sÃ³! Essa delÃ­cia de chocolate faz a alegria da crianÃ§ada.', 3, '1,00'),
 ('PÃ£o de Queijo', 0, 'lanches/632a210b43894.jpg', 'Alimento', 'O pÃ£o de queijo Ã© uma iguaria oriunda da AmÃ©rica do Sul, muito apreciada no Brasil.', 4, '2,50'),
 ('Achocolatado Pronto CHOCO MILK-200ml', 0, 'lanches/6331858d03011.jpg', 'Alimento', '\r\n                    ', 5, '3,00'),
-('Ãgua 500ml com gÃ¡s', 0, 'lanches/63318692012b2.jpg', 'Alimento', '\r\n                    ', 6, '2,50'),
+('Ãgua 500ml com gÃ¡s', 19, 'lanches/63318692012b2.jpg', 'Alimento', '\r\n                    ', 6, '2,50'),
 ('Ãgua 500ml sem gÃ¡s', 0, 'lanches/633186f427a75.jpg', 'Alimento', '\r\n                    Ãgua Mineral Sem GÃ¡s Crystal PET 500ML', 7, '1,75'),
 ('Ãgua 510ml sem gÃ¡s PET', 0, 'lanches/633187de1bffe.jpg', 'Alimento', '\r\n                    Ãgua mineral sem gÃ¡s, proveniente da fonte de Santa BÃ¡rbara. ', 8, '1,18'),
 ('Ãgua 510ml com  gÃ¡s PET', 0, 'lanches/6331881d960c8.jpg', 'Alimento', '\r\n                    ', 9, '2,35'),
@@ -146,7 +146,13 @@ INSERT INTO `tabela_produtos` (`nome`, `quantidade`, `arquivo`, `tipo`, `descric
 ('Refrigerante H20H 500ml', 0, 'lanches/6331a6bf3efb9.jpg', 'Bebida', '\r\n                    Refrigerante H20H 500ml.Bebida levemente gaseificada, com zero de aÃ§Ãºcar, fonte de vitaminas B e suco natural de limÃ£o.', 22, '4,00'),
 ('Refrigerante SPRITE 350ml', 0, 'lanches/6331a7216fe27.jpg', 'Bebida', '\r\n                    Refrigerante SPRITE 350ml.Com um sabor Ãºnico, Sprite Sem AÃ§Ãºcar Ã© o refrigerante de limÃ£o mais vendido no mundo. Produzido com Ã¡gua gaseificada, suco de limÃ£o e aroma natural, nÃ£o contÃ©m aÃ§Ãºcares. Compre Refrigerante Sprite e experimente esse gostinho refrescante!', 23, '4,00'),
 ('Refrigerante SPRITE ZERO 350ml', 0, 'lanches/6331a79e639d2.jpg', 'Bebida', 'Refrigerante SPRITE ZERO 350ml.Sprite Ã© o refrigerante refrescante sabor limÃ£o mais famoso do Brasil. A versÃ£o Zero possui baixa caloria e zero aÃ§Ãºcar.\r\n                    ', 24, '4,00'),
-('Hamburger', 0, 'lanches/6332d8f95bf86.jpg', 'Alimento', 'teste\r\n                    ', 25, '23');
+('Coca Cola lata 350ml', 0, 'lanches/632a1f3c15096.jpg', 'Bebida', '\r\n   Refrigerante Coca-Cola 350ml: Refresque-se com uma Coca-Cola! O sabor que vocÃª jÃ¡ conhece, ideal para matar sua sede, para acompanhar refeiÃ§Ãµes ou tomar ao longo do dia.                 ', 26, '3,50'),
+('Mousse de limÃ£o', 0, 'lanches/632a204aa1c92.jpg', 'alimento', 'Base crocante de biscoito com castanha de caju e a leveza do creme aerado de limÃ£o!\r\n                    ', 27, '2,50'),
+('Doce de brigadeiro', 0, 'lanches/632a20bc17692.jpg', 'Alimento', 'O brigadeiro Ã© um doce genuinamente brasileiro. Um orgulho sÃ³! Essa delÃ­cia de chocolate faz a alegria da crianÃ§ada.', 28, '1,00'),
+('PÃ£o de Queijo', 0, 'lanches/632a210b43894.jpg', 'Alimento', 'O pÃ£o de queijo Ã© uma iguaria oriunda da AmÃ©rica do Sul, muito apreciada no Brasil.', 29, '2,50'),
+('PÃ£o de Queijo', 0, 'lanches/632a210b43894.jpg', 'Alimento', 'O pÃ£o de queijo Ã© uma iguaria oriunda da AmÃ©rica do Sul, muito apreciada no Brasil.', 30, '2,50'),
+('Achocolatado Pronto CHOCO MILK-200ml', 0, 'lanches/6331858d03011.jpg', 'Alimento', '\r\n                    ', 31, '3,00'),
+('Ãgua 500ml com gÃ¡s', 0, 'lanches/63318692012b2.jpg', 'Alimento', '\r\n                    ', 32, '2,50');
 
 -- --------------------------------------------------------
 
