@@ -2,6 +2,7 @@
     
 
     include("..\conexao.php");
+    include("../menu_adm.php");
     include("..\icon.php");
 
     if(!isset($_SESSION)){
