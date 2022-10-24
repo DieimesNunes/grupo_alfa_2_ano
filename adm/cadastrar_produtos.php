@@ -101,7 +101,7 @@
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                 <button type="reset"  class="btn btn-danger">Limpar</button>
 
-                <button type="submit" class="btn btn-outline-primary"><a href="index.php" class="link">Voltar</a></button>
+                <button type="submit" class="btn btn-outline-primary"><a href="index_adm.php" class="link">Voltar</a></button>
                 <img src="" alt="">
             </form>
         </div>

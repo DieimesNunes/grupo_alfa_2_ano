@@ -1,27 +1,49 @@
 <?php
     include("conexao.php");
     require("autenticacao.php");
+    include("menu.php");
+
+
 
     if(isset($_GET['id_produto'])){
         $id_produto = $_GET['id_produto'];  
 
         $consulta = "SELECT * FROM tabela_produtos WHERE id_lanche='$id_produto'";
         $deucerto = $mysqli->query($consulta) or die ($mysqli->error);
-        $consulta_produto = $deucerto -> fetch_assoc();       
+        $consulta_produto = $deucerto -> fetch_assoc();  
+        
+        
     }
     
 
     if(isset($_POST['bt_nome'])){
         $nome = $_POST['bt_nome'];
-        $telefone = $_POST['bt_telef'];
+        $telefone = $_POST['bt_telefone'];
         $quantidade = $_POST['bt_quantidade']; // Talvez pode ser retirado
+        
 
         $mysqli -> query("INSERT INTO tabela_pedidos (nome, telefone, quantidade, id_produto) values ('$nome','$telefone', '$quantidade','$id_produto')") or die($mysqli -> error);
         $_SESSION['msg'] = "<div class='alert alert-success'>Pedido realizado com sucesso!!!</div>";
+        ?>
+
+        <br>
+        <a href="index.html"><input class="btn btn-success" type="button" value="Voltar"></a>
+        <?php
+        
+        $consulta_produto['quantidade'] = $consulta_produto['quantidade'] - $quantidade;
+        
+        
+        $sql_code = "UPDATE tabela_produtos
+            SET quantidade = '$consulta_produto[quantidade]'
+            WHERE id_lanche = '$consulta_produto[id_lanche]'";
+
+            $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
+
+        
     }
 
     
-?>
+        ?>
 
 <!DOCTYPE html>
     <html lang="pt-br">
@@ -45,7 +67,7 @@
             ?>
             <h1 class="center">Pedidos</h1>
             <div class="text-center">
-                <img src="<?php echo $consulta_produto['arquivo'];  ?>" class="rounded" alt="..." width="600px">
+                <img src="<?php echo $consulta_produto['arquivo'];  ?>" class="rounded" alt="..." width="300px" hight="30px">
                 <h3>Nome do produto: <?php echo $consulta_produto['nome']; ?></h3>
                 <h3>Preço: <?php echo $consulta_produto['preco']; ?></h3>
             </div>
@@ -53,7 +75,15 @@
 
             <form action="" method="post">
                 <div class="mb-3">
-                    <label class="form-label" for="bt_telef">Digite a quantidade: </label>
+                    <label class="form-label" for="bt_telef">Digite o seu nome: </label>
+                    <input class="form-control" type="text" name="bt_nome">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="bt_telef">Digite o seu telefone: </label>
+                    <input class="form-control" type="text" name="bt_telefone">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="bt_quantidade">Digite a quantidade: </label>
                     <input class="form-control" type="text" name="bt_quantidade">
                 </div>
                             
