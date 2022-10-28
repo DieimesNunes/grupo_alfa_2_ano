@@ -11,9 +11,9 @@
               
             </ul>
           </div>
-          <a  class="as" href="cadastrar_lanches.php"><button class="btn btn-dark d-flex" type="submit">Cadastrar Lanches</button></a>   
-          <a  class="as" href="login_adm.php"><button class="btn btn-dark d-flex" type="submit">Consultar</button></a>
-          <a  class="as" href="sair.php"><button class="btn btn-danger d-flex" type="submit">Sair</button></a>
+          <button class="btn btn-dark d-flex" type="submit"><a href="" class="linkbom">Cadastrar Lanches</a></button>
+          <button class="btn btn-dark d-flex" type="submit"><a href="" class="linkbom">Consultar</a></button>
+          <button class="btn btn-danger d-flex" type="submit"><a href="" class="linkbom">Sair</a></button></a>
           
         </div>
 </nav>

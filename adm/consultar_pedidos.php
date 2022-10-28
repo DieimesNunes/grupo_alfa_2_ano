@@ -25,7 +25,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="../style2.css">
+        <link rel="stylesheet" href="../style3.css">
     <title>Consultar Produtos</title>
     </head>
     <body>
@@ -33,7 +33,7 @@
 
         <div class="container pdg">
             <form action="" method="post">
-                <input  class="btn btn-primary" type="submit"  value="Atualizar" />
+                <input  class="btn btn-primary" type="submit"  value="Atualizar"/>
                 <?php
                     if(isset($_SESSION['resultado'])){
                         echo $_SESSION['resultado']; 
@@ -70,7 +70,7 @@
                             <th scope="row"><?php echo $mensagem['nome'];?></th>
                             <td><?php echo $mensagem['telefone'];?></td>
                             <td class="font"><?php echo $mensagem['quantidade'];?></td>
-                            <td class="sss"><?php echo $mensagem['id_produto'];?></td>
+                            <td class="sss"><?php echo $mensagem['id_produto']; echo " ".$mensagem['nomeproduto'];?></td>
                         </tr>
 
                     <?php
