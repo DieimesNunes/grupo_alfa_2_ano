@@ -8,12 +8,11 @@
         $senha = $_POST['bt_senha'];
         $nome = $_POST['bt_nome'];
         $telefone = $_POST['bt_telefone'];
-        $cpf = $_POST['bt_cpf'];
         $turma = $_POST['bt_turma'];
 
         $senha_nova = password_hash(($senha), PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO tabela_usuario (login, senha, nome, telefone, cpf, turma) VALUES ('$login', '$senha_nova', '$nome', '$telefone', '$cpf', '$turma')";
+        $sql = "INSERT INTO tabela_usuario (login, senha, nome, telefone, turma) VALUES ('$login', '$senha_nova', '$nome', '$telefone','$turma')";
 
         $deucerto = $mysqli->query($sql) or die ($mysqli->error);
 
@@ -63,11 +62,6 @@
                                     <label for="bt_telefone" class="">Número de Telefone:</label>
                                     <br>
                                     <input class="form-control" type="text" placeholder="Digite o seu telefone: " name="bt_telefone">
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <label for="bt_cpf" class="">Número do CPF:</label>
-                                    <br>
-                                    <input class="form-control" type="text" placeholder="Digite o seu CPF: " name="bt_cpf">
                                 </div>
                                 <div class="form-floating mb-3">
                                     <label for="bt_turma" class="">Digite sua turma:</label>
