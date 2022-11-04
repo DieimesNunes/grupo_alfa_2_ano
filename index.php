@@ -22,7 +22,7 @@
     <title>Pi</title>
 </head>
 <body>
-    <h1 class= "center font margintop">Lanches Disponíveiss</h1>
+    <h1 class= "center font margintop">Lanches Disponíveis</h1>
     <div class="container">
         <div class = "row">
             <?php
