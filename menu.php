@@ -12,7 +12,6 @@
             </ul>
           </div>
           <a  class="as" href="login_usuario.php"><button class="btn btn-dark d-flex" type="submit">Entrar</button></a>
-          <a  class="as" href="cadastrar_usuario.php"><button class="btn btn-dark d-flex" type="submit">Cadastrar</button></a>
           <a  class="as" href="login.php"><button class="btn btn-dark d-flex" type="submit">ADM</button></a>                                 
         </div>
 </nav>

@@ -20,10 +20,10 @@
         $nome = $_POST['bt_nome'];
         $telefone = $_POST['bt_telefone'];
         $quantidade = $_POST['bt_quantidade']; // Talvez pode ser retirado
-        $nome_produto = $consulta_produto['nome'];
+        
         
 
-        $mysqli -> query("INSERT INTO tabela_pedidos (nome, telefone, quantidade, id_produto, nomeproduto) values ('$nome','$telefone', '$quantidade','$id_produto','$nome_produto')") or die($mysqli -> error);
+        $mysqli -> query("INSERT INTO tabela_pedidos (nome, telefone, quantidade, id_produto) values ('$nome','$telefone', '$quantidade','$id_produto')") or die($mysqli -> error);
         $_SESSION['msg'] = "<div class='alert alert-success'>Pedido realizado com sucesso!!!</div>";
         ?>
 

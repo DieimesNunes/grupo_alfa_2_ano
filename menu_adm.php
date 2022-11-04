@@ -13,7 +13,7 @@
           </div>
           <button class="btn btn-dark d-flex" type="submit"><a href="" class="linkbom">Cadastrar Lanches</a></button>
           <button class="btn btn-dark d-flex" type="submit"><a href="" class="linkbom">Consultar</a></button>
-          <button class="btn btn-danger d-flex" type="submit"><a href="" class="linkbom">Sair</a></button></a>
+          <a class="btn btn-danger d-flex " href="../sair.php">Sair</a>         
           
         </div>
 </nav>
