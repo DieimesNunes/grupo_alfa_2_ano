@@ -1,5 +1,6 @@
 <?php
-    include("conexao.php");
+     include("../menu.php");
+    include("../conexao.php");
     
     if(isset($_POST['bt_login'])){
         $login = $_POST['bt_login'];
@@ -48,7 +49,7 @@
 <body>
     
 <div>
-    <div>
+    <div class="container">
         <div class="teste">
                 <div class="row align-itens-center gx-5">
             
@@ -76,7 +77,7 @@
                         </div>
                         <div class="col-md-6 order-md-1">
                             <div class="col-12">
-                                 <img src="imagens/login-foto" alt="" class="img-fluid img-new">
+                                 <img src="../imagens/login-foto" alt="" class="img-fluid img-new">
                             </div>
                         </div>
                     </div>

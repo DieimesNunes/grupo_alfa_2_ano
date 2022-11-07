@@ -14,7 +14,9 @@
         
         
     }
-    
+    ?>
+    <div class="container">
+    <?php
 
     if(isset($_POST['bt_nome'])){
         $nome = $_POST['bt_nome'];
@@ -28,6 +30,7 @@
         ?>
 
         <br>
+        
         <a href="index.php"><input class="btn btn-success" type="button" value="Voltar"></a>
         <?php
         
@@ -59,7 +62,7 @@
         <title>Informações obrigatórias</title>
     </head>
     <body>
-        <div class="container">
+       
             <?php
                 if(isset($_SESSION['msg'])){ // Mensagem para o usuário
                     echo $_SESSION['msg'];
@@ -77,15 +80,15 @@
             <form action="" method="post">
                 <div class="mb-3">
                     <label class="form-label" for="bt_telef">Digite o seu nome: </label>
-                    <input class="form-control" type="text" name="bt_nome">
+                    <input class="form-control" type="text" name="bt_nome" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="bt_telef">Digite o seu telefone: </label>
-                    <input class="form-control" type="text" name="bt_telefone">
+                    <input class="form-control" type="text" name="bt_telefone" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="bt_quantidade">Digite a quantidade: </label>
-                    <input class="form-control" type="text" name="bt_quantidade">
+                    <label  class="form-label" for="bt_quantidade">Digite a quantidade: </label>
+                    <input class="form-control" type="text" name="bt_quantidade" required>
                 </div>
                             
                 <input class="btn btn-primary" type="submit" value="Fazer pedido">

@@ -36,33 +36,30 @@
 </head>
 <body>
 <div>
-        <div>
-            <div class="teste">
-                <h1 id="titulo">Cadastrar</h1>
+        <div class="container">
+            <div class="teste">>
                 <div class="row align-itens-center gx-5">
             
                     <div class="col-md-6 order-md-3">
-                        <h5>Cadastrar Usuario</h5>
+                        <h5>Cadastrar-se</h5>
                         <br>
                             <form action="#"  method="post" enctype = "multpart/form-data">
-                                <div class="form-floating mb-3">
-                                    <label for="bt_login" class="">Login:</label>
+                            <label for="bt_login" class="">Login:</label>    
+                            <div class="form-floating mb-3">                                  
                                     <input class="form-control" type="text" placeholder="Digite o seu nome" name="bt_login">
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <label for="bt_senha" class="">Senha:</label>
-                                    <br>
-                                    <input class="form-control" type="password" placeholder="Digite a sua senha" name="bt_senha">
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <label for="bt_nome" class="">Nome Completo:</label>
-                                    <input class="form-control" type="text" placeholder="Digite o seu nome completo:" name="bt_nome">
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <label for="bt_telefone" class="">Número de Telefone:</label>
-                                    <br>
+                            </div>
+                            <label for="bt_senha" class="">Senha:</label>
+                            <div class="form-floating           mb-3">                                                                      
+                                <input class="form-control" type="password" placeholder="Digite a sua senha" name="bt_senha">
+                            </div>
+                            <label for="bt_nome" class="">Nome Completo:</label>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="text" placeholder="Digite o seu nome completo:" name="bt_nome">
+                            </div>
+                            <label for="bt_telefone" class="">Número de Telefone:</label>
+                            <div class="form-floating mb-3">                                                                
                                     <input class="form-control" type="text" placeholder="Digite o seu telefone: " name="bt_telefone">
-                                </div>
+                            </div>
                                 <div class="form-floating mb-3">
                                     <label for="bt_turma" class="">Digite sua turma:</label>
                                     <input class="form-control" type="text" placeholder="Digite sua turma: " name="bt_turma">
