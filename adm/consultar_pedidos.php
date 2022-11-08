@@ -16,7 +16,10 @@
 
     $quantidade_mensagens = $consulta_mensagens->num_rows;
 
+    $teste = "SELECT tabela_produtos.nome FROM tabela_produtos, tabela_receber, tabela_pedido WHERE id_produto=1";
+    $teste_consulta = $mysqli->query ( $teste) or die ($mysqli->error);
 
+    var_dump($teste_consulta);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
