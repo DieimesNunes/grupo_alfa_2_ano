@@ -16,10 +16,9 @@
 
     $quantidade_mensagens = $consulta_mensagens->num_rows;
 
-    $teste = "SELECT tabela_produtos.nome FROM tabela_produtos, tabela_receber, tabela_pedido WHERE id_produto=1";
-    $teste_consulta = $mysqli->query ( $teste) or die ($mysqli->error);
+    
 
-    var_dump($teste_consulta);
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -70,13 +69,16 @@
                                     $d = 1;
                                     $contador = 0; 
                                     while($mensagem = $consulta_mensagens -> fetch_assoc()){
-                                                  
+                                        
+                                        $cliente_sql = "SELECT tabela_produtos.nome FROM tabela_produtos WHERE id_lanche=$mensagem[id_produto]";
+                                        $cliente_consulta = $mysqli->query ( $cliente_sql) or die ($mysqli->error);
+                                        $cliente = $cliente_consulta -> fetch_assoc() ;
                         ?>
                         <tr>
                             <th scope="row"><?php echo $mensagem['nome'];?></th>
                             <td><?php echo $mensagem['telefone'];?></td>
                             
-                            <td class="font"><?php echo "x";?></td>
+                            <td class="font"><?php echo  $cliente['nome'];?></td>
                             <td class="font"><?php echo $mensagem['quantidade'];?></td>
                         </tr>
 
