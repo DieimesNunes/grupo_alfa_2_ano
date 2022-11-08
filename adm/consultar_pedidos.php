@@ -1,9 +1,9 @@
 <?php 
     
 
-    include("..\conexao.php");
-    include("../menu_adm.php");
-    include("..\icon.php");
+    include("../conexao.php");
+    include("menu_adm.php");
+    include("../icon.php");
 
     if(!isset($_SESSION)){
         session_start();
