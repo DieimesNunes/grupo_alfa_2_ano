@@ -1,5 +1,5 @@
 <?php 
-include('../menu_adm.php');
+include('menu_adm.php');
 include('../icon.php');
 ?>
 

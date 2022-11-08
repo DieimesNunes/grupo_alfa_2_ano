@@ -22,12 +22,12 @@
                     
                           
                     $_SESSION['adm_ativo'] = $usuario['login'];
-                    header("location:adm/index_adm.php");
+                    header("location:index_adm.php");
         
                     }elseif(isset($_SESSION)){
                         
                         $_SESSION['adm_ativo'] = $usuario['login'];
-                        header("location:adm/index_adm.php");
+                        header("location:index_adm.php");
                     }
                 }else{
                     echo "Falha ao logar! login ou senha incorreto";

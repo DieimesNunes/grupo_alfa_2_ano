@@ -1,3 +1,11 @@
+<?php 
+  if(!isset($_SESSION)){
+    session_start();
+    
+  }
+
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a href="index.php">
@@ -10,7 +18,18 @@
             <ul class="navbar-nav">
               
             </ul>
-          </div>    
+          </div> 
+          <?php
 
+            if(isset($_SESSION["adm_ativo"])){
+                echo "teste";
+          ?>
+              <button type="button" class="btn btn-primary">Primary</button>
+          <?php
+              
+            }            
+
+          ?>   
+              
           </div>
 </nav>
