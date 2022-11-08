@@ -33,22 +33,23 @@
 
         <div class="container pdg">
             <form action="" method="post">
-                <input  class="btn btn-primary" type="submit"  value="Atualizar"/>
+                <!-- <input  class="btn btn-primary" type="submit"  value="Atualizar"/> -->
                 <?php
+                    /*
                     if(isset($_SESSION['resultado'])){
                         echo $_SESSION['resultado']; 
                         unset($_SESSION['resultado']);                   
                     }
+                    */
                 ?>
 
                 <table class="table shesh">
                     <thead>
                         <tr>
-                            <th scope="col" class="table-light">Nome</th>
-                            
-                            <th scope="col" class="table-light">telefone</th>
-                            <th scope="col" class="table-light">Quantidade</th>
-                            <th scope="col" class="table-light text">id</th>
+                            <th scope="col" class="table-light">Nome</th>                            
+                            <th scope="col" class="table-light">Telefone</th>
+                            <th scope="col" class="table-light">Produto</th>
+                            <th scope="col" class="table-light">Quantidade</th>                            
                         </tr>
                     </thead>        
                     <tbody>
@@ -58,7 +59,9 @@
                             
                             if($quantidade_mensagens == 0){
                         ?>
-                        <p>Nenhum produto foi cadastrado</p>
+                            <tr>
+                                <td colspan="4" > Nenhum pedido realizado hoje</td>
+                            </tr>                        
                         <?php
                                 } else{
                                     $d = 1;
@@ -69,8 +72,9 @@
                         <tr>
                             <th scope="row"><?php echo $mensagem['nome'];?></th>
                             <td><?php echo $mensagem['telefone'];?></td>
+                            
+                            <td class="font"><?php echo "x";?></td>
                             <td class="font"><?php echo $mensagem['quantidade'];?></td>
-                            <td class="sss"><?php echo $mensagem['id_produto']; echo " ".$mensagem['nomeproduto'];?></td>
                         </tr>
 
                     <?php
@@ -79,9 +83,7 @@
                     ?>
                     </tbody>
                 </table>
-            </form>       
-        
-            
+            </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
         crossorigin="anonymous"></script>        
