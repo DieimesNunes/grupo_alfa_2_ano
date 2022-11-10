@@ -55,8 +55,11 @@
         
 
         <div class="container pdg">
+        
             <form action="" method="post">
                 <input  class="btn btn-primary" type="submit"  value="Atualizar" />
+                <a href="index_adm.php"><input class="btn btn-primary" type="button" value="Votar"></a>
+                
                 <?php
                     if(isset($_SESSION['resultado'])){
                         echo $_SESSION['resultado']; 

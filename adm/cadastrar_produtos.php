@@ -1,6 +1,6 @@
 <?php
     include("../conexao.php");
-    include("../menu_adm.php");
+    include("menu_adm.php");
 
     if(isset($_POST['bt_name'])){
         $arquivo= $_FILES['bt_arquivo'];    
