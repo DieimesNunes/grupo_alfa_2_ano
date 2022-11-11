@@ -29,7 +29,7 @@
             
                 if($quantidade_mensagens == 0){
             ?>           
-                <p>Nenhum produto foi cadastrado</p>
+                <p>Nenhum produto foi cadastrado ta ok?</p>
             
             
             <?php
