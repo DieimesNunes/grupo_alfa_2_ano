@@ -15,8 +15,9 @@ include('../icon.php');
     </head>
     <body>
         <div class="container">
-            <h1>Tela de administração</h1>
-            <h3>Cadastrar</h3>            
+            <h1>Tela de administração</h1>           
+            <h3>Cadastrar</h3>  
+            <p>Cadastrar administradores <a class="btn btn-primary" href="cadastrar_adm.php">Acessar</a></p>          
             <p>Cadastrar produtos <a class="btn btn-primary" href="cadastrar_produtos.php">Acessar</a></p>
             <hr>
             <h3>Consultar</h3>
