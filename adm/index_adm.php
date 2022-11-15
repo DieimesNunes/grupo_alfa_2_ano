@@ -31,6 +31,7 @@
             <h3>Deletar</h3>
             <p>Apagar produtos <a class="btn btn-primary" href="cadastrar_produtos.php">Acessar</a></p>
             <p>Apagar pedidos <a class="btn btn-primary" href="cadastrar_produtos.php">Acessar</a></p>
+            <p>Apagar administrador <a class="btn btn-primary" href="deletar_adm.php">Acessar</a></p>
         </div>        
     </body>
 </html>
