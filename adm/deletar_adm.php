@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <?php include("../icon.php"); ?>
-        <title>Consultar administrador</title>
+        <title>Deletar administrador</title>
     </head>
     <body>
         <div class="container">
@@ -41,7 +41,11 @@
                                 ?>
 
                                     <tr>
-                                        <td><?php echo $adm['nome']; ?></td>                                        
+                                        <td><?php echo $adm['nome']; ?></td> 
+                                        <td>
+                                            <a class="btn btn-default" href="#" role="button"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
+                                            <a class="btn btn-default" href="#" role="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Deletar</a>
+                                        </td>
                                     </tr> 
 
                                     <?php

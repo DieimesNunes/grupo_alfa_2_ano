@@ -24,6 +24,7 @@
             <h3>Consultar</h3>
             <p>Consultar produtos <a class="btn btn-primary" href="consultar_produtos.php">Acessar</a></p>
             <p>Consultar pedidos <a class="btn btn-primary" href="consultar_pedidos.php">Acessar</a></p>
+            <p>Consultar administrador <a class="btn btn-primary" href="consultar_adm.php">Acessar</a></p>
             <hr>
             <h3>Alterar</h3>
             <p>Alterar cadastro de produtos <a class="btn btn-primary" href="cadastrar_produtos.php">Acessar</a></p>
