@@ -74,7 +74,7 @@
                             <th scope="col" class="table-light">Arquivo Foto</th>
                             <th scope="col" class="table-light">Descrição</th>
                             <th scope="col" class="table-light">Preço</th>
-                            <th scope="col" class="table-light text">Quantidade</th>
+                            <th scope="col" class="table-light text">Apagar</th>
                         </tr>
                     </thead>        
                     <tbody>
@@ -106,9 +106,7 @@
                             </td>
                             <td class="font"><?php echo $mensagem['preco'];?></td>
                             <td class="sss">                               
-                                <button type="button" class="decrement" class="botao" >-</button> 
-                                <input name="<?php echo  $name_btn[$contador]; ?>" type="number" class="numero-input" min="-1" max="100" step="1" value="<?php echo $mensagem['quantidade']; ?>" class="my-input"> <!-- Têm duas class aqui ? -->
-                                <button type="button" class="increment" class="botao" >+</button>           
+                                <a href="apagar2.php?id=<?php echo $mensagem['id_lanche'];?>"><input class="btn btn-primary"  type="button" value="Apagar">  </a>      
                             </td>
 
                             
