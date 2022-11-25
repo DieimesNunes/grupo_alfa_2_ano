@@ -24,7 +24,7 @@ include('../icon.php');
             <p>Consultar pedidos <a class="btn btn-primary" href="consultar_pedidos.php">Acessar</a></p>
             <hr>
             <h3>Alterar</h3>
-            <p>Alterar cadastro de produtos <a class="btn btn-primary" href="cadastrar_produtos.php">Acessar</a></p>
+            <p>Alterar cadastro de produtos <a class="btn btn-primary" href="alterar_produtos.php">Acessar</a></p>
             <hr>
             <h3>Deletar</h3>
             <p>Apagar produtos <a class="btn btn-primary" href="apagar_produtos.php">Acessar</a></p>

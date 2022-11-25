@@ -1,5 +1,6 @@
 <?php
     include("../conexao.php");
+    include("menu_adm.php");
 
     $id_mensagem = intval($_GET["id"]);
     $sql_mensagens = "SELECT * FROM tabela_produtos WHERE id_lanche = '$id_mensagem'";
@@ -25,12 +26,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_apagar.css">
     <title>Document</title>
 </head>
 <body>
 
-    <div class=container>
+    <div class="container">
         <div class="table-responsive">
             <?php 
             if($sumir == false){
@@ -53,9 +55,9 @@
                 
             </table>
             <form action="" method="post">
-                    <h1>Tem certeza que deseja apagar ? </h1>
+                    <h3>Tem certeza que deseja apagar ? </h3>
                     <button name="confirmar" value="1" class="btn btn-danger">Sim</button>
-                    <a href="consulta.php" class="btn btn-default">Não</a>            
+                    <a href="apagar_produtos.php" class="btn btn-default">Não</a>            
                 </form>
             <?php 
             }else{
