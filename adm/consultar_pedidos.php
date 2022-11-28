@@ -75,7 +75,7 @@
                         <th scope="row"><?php echo $mensagem['nome'];?></th>
                         <td><?php echo $mensagem['telefone'];?></td>
                         
-                        <td class="font"><?php echo  $cliente['nome'];?></td>
+                        <td class="font"><?php echo $cliente['nome'];?></td>
                         <td class="font"><?php echo $mensagem['quantidade'];?></td>
                     </tr>
 
