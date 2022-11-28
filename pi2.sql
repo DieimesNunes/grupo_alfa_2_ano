@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 21-Out-2022 às 14:14
+-- Tempo de geração: 16-Nov-2022 às 00:21
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -36,14 +36,16 @@ CREATE TABLE IF NOT EXISTS `adm` (
   `login` varchar(200) COLLATE utf8_bin NOT NULL,
   `senha` varchar(200) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_adm`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `adm`
 --
 
 INSERT INTO `adm` (`id_adm`, `nome`, `login`, `senha`) VALUES
-(1, 'Joao Gabriel do Prado Schianti', 'joao', '$2y$10$F3wwDR/1F19aMiqRvxz0ve/niwL/gC75Zcm1vU/ogSKiGff9j/G/.');
+(1, 'Joao Gabriel do Prado Schianti', 'joao', '$2y$10$F3wwDR/1F19aMiqRvxz0ve/niwL/gC75Zcm1vU/ogSKiGff9j/G/.'),
+(4, 'Dieimes Nunes de Souza', 'dieimes', '$2y$10$UTiOmzniue4VIsQq.hJ27OFl6GH2iHx3ZMmXv9d6TCl/I0xmymbbS'),
+(5, 'teste', 'teste', '$2y$10$uu6PIeOFA.lZb4O7t83jSu2zIHlqKfc5E.Fb80sZwCGIMD5jk3aCe');
 
 -- --------------------------------------------------------
 
@@ -86,18 +88,17 @@ CREATE TABLE IF NOT EXISTS `tabela_pedidos` (
   `telefone` varchar(100) COLLATE utf8_bin NOT NULL,
   `id_produto` int(11) NOT NULL,
   `quantidade` varchar(100) COLLATE utf8_bin NOT NULL,
+  `data` date DEFAULT NULL,
   PRIMARY KEY (`id_pedidos`),
   KEY `id_produto` (`id_produto`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `tabela_pedidos`
 --
 
-INSERT INTO `tabela_pedidos` (`id_pedidos`, `nome`, `telefone`, `id_produto`, `quantidade`) VALUES
-(1, 'dieimes', 'dfdsfds', 2, ''),
-(2, 'Dieimes teste1', '9999999', 2, '1'),
-(3, '', '', 2, '');
+INSERT INTO `tabela_pedidos` (`id_pedidos`, `nome`, `telefone`, `id_produto`, `quantidade`, `data`) VALUES
+(1, 'Dieimes', '43988179995', 6, '2', '2022-11-13');
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,7 @@ INSERT INTO `tabela_produtos` (`nome`, `quantidade`, `arquivo`, `tipo`, `descric
 ('Doce de brigadeiro', 0, 'lanches/632a20bc17692.jpg', 'Alimento', 'O brigadeiro Ã© um doce genuinamente brasileiro. Um orgulho sÃ³! Essa delÃ­cia de chocolate faz a alegria da crianÃ§ada.', 3, '1,00'),
 ('PÃ£o de Queijo', 0, 'lanches/632a210b43894.jpg', 'Alimento', 'O pÃ£o de queijo Ã© uma iguaria oriunda da AmÃ©rica do Sul, muito apreciada no Brasil.', 4, '2,50'),
 ('Achocolatado Pronto CHOCO MILK-200ml', 0, 'lanches/6331858d03011.jpg', 'Alimento', '\r\n                    ', 5, '3,00'),
-('Ãgua 500ml com gÃ¡s', 19, 'lanches/63318692012b2.jpg', 'Alimento', '\r\n                    ', 6, '2,50'),
+('Ãgua 500ml com gÃ¡s', 12, 'lanches/63318692012b2.jpg', 'Alimento', '\r\n                    ', 6, '2,50'),
 ('Ãgua 500ml sem gÃ¡s', 0, 'lanches/633186f427a75.jpg', 'Alimento', '\r\n                    Ãgua Mineral Sem GÃ¡s Crystal PET 500ML', 7, '1,75'),
 ('Ãgua 510ml sem gÃ¡s PET', 0, 'lanches/633187de1bffe.jpg', 'Alimento', '\r\n                    Ãgua mineral sem gÃ¡s, proveniente da fonte de Santa BÃ¡rbara. ', 8, '1,18'),
 ('Ãgua 510ml com  gÃ¡s PET', 0, 'lanches/6331881d960c8.jpg', 'Alimento', '\r\n                    ', 9, '2,35'),

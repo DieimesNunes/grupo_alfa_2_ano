@@ -1,24 +1,33 @@
 <?php 
+<<<<<<< HEAD
     
 
     include("../conexao.php");
     include("menu_adm.php");
     include("../icon.php");
+=======
+    include("../conexao.php");
+>>>>>>> Mestre_Jedi
 
     if(!isset($_SESSION)){
         session_start();
     }
-  
+   
 
-    $sql_mensagens = "SELECT * FROM tabela_pedidos";
+    if(isset($_POST['bt_data'])){
+        $data = $_POST['bt_data']; 
 
-    $consulta_mensagens = $mysqli->query ( $sql_mensagens) or die ($mysqli->error);
+        $sql_pedidos = "SELECT * FROM tabela_pedidos WHERE data='2022-11-13'";
+        $consulta_pedidos = $mysqli->query($sql_pedidos) or die ($mysqli->error);
+        $quantidade_pedidos = $consulta_pedidos -> num_rows;
+        //$data_pedido = $consulta_data_sql -> fetch_assoc() ;        
+    }else{
+        $sql_pedidos = "SELECT * FROM tabela_pedidos";        
+        $consulta_pedidos = $mysqli->query($sql_pedidos) or die ($mysqli->error);
+        $quantidade_pedidos = $consulta_pedidos -> num_rows;
+    }
 
-    $quantidade_mensagens = $consulta_mensagens->num_rows;
-
-    
-
-    
+        
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,18 +42,17 @@
         <div class="container"> 
             <br>
             <br>
-            <form action="">
+            <form action="" method="POST">
                 <div class="mb-3">
                     <label class="form-label" for="">Data dos pedidos: </label>
-                    <input type="date">
-                    <input class="btn btn-primary" type="submit">
-                </div>
-
-                
+                    <input type="date" name="bt_data">
+                    <input class="btn btn-primary" type="submit" value="Buscar">
+                </div>                
             </form>
             <table class="table">
                 <thead>
                     <tr>
+                    <th scope="col" class="table-light">Data do pedido: </th>
                         <th scope="col" class="table-light">Nome</th>                            
                         <th scope="col" class="table-light">Telefone</th>
                         <th scope="col" class="table-light">Produto</th>
@@ -56,27 +64,31 @@
                         $voltar = "../";
                         
                         
-                        if($quantidade_mensagens == 0){
+                        if($quantidade_pedidos == 0){
                     ?>
                         <tr>
-                            <td colspan="4" > Nenhum pedido realizado hoje</td>
+                            <td colspan="5" > Nenhum pedido realizado nesta data</td>
                         </tr>                        
                     <?php
                             } else{
                                 $d = 1;
                                 $contador = 0; 
-                                while($mensagem = $consulta_mensagens -> fetch_assoc()){
+                                while($pedidos = $consulta_pedidos -> fetch_assoc()){
                                     
-                                    $cliente_sql = "SELECT tabela_produtos.nome FROM tabela_produtos WHERE id_lanche=$mensagem[id_produto]";
+                                    $cliente_sql = "SELECT tabela_produtos.nome FROM tabela_produtos WHERE id_lanche=$pedidos[id_produto]";
                                     $cliente_consulta = $mysqli->query ( $cliente_sql) or die ($mysqli->error);
                                     $cliente = $cliente_consulta -> fetch_assoc() ;
                     ?>
                     <tr>
-                        <th scope="row"><?php echo $mensagem['nome'];?></th>
-                        <td><?php echo $mensagem['telefone'];?></td>
+                        <?php
+                            $date = date_create($pedidos['data']);
+                        ?>
+                        <td><?php echo date_format($date, 'd-m-Y');?></td>
+                        <td><?php echo $pedidos['nome'];?></td>
+                        <td><?php echo $pedidos['telefone'];?></td>
                         
                         <td class="font"><?php echo  $cliente['nome'];?></td>
-                        <td class="font"><?php echo $mensagem['quantidade'];?></td>
+                        <td class="font"><?php echo $pedidos['quantidade'];?></td>
                     </tr>
 
                 <?php
