@@ -22,10 +22,11 @@
         $nome = $_POST['bt_nome'];
         $telefone = $_POST['bt_telefone'];
         $quantidade = $_POST['bt_quantidade']; // Talvez pode ser retirado
+        $data = date('Y/m/d');
         
         
 
-        $mysqli -> query("INSERT INTO tabela_pedidos (nome, telefone, quantidade, id_produto) values ('$nome','$telefone', '$quantidade','$id_produto')") or die($mysqli -> error);
+        $mysqli -> query("INSERT INTO tabela_pedidos (nome, telefone, quantidade, id_produto, data) values ('$nome','$telefone', '$quantidade','$id_produto', '$data')") or die($mysqli -> error);
         $_SESSION['msg'] = "<div class='alert alert-success'>Pedido realizado com sucesso!!!</div>";
         ?>
 
@@ -34,15 +35,12 @@
         <a href="index.php"><input class="btn btn-success" type="button" value="Voltar"></a>
         <?php
         
-        $consulta_produto['quantidade'] = $consulta_produto['quantidade'] - $quantidade;
-        
+        $consulta_produto['quantidade'] = $consulta_produto['quantidade'] - $quantidade;        
         
         $sql_code = "UPDATE tabela_produtos
             SET quantidade = '$consulta_produto[quantidade]'
             WHERE id_lanche = '$consulta_produto[id_lanche]'";
-
             $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
-
         
     }
 
