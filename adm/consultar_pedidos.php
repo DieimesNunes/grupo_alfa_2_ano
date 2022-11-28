@@ -84,7 +84,7 @@
                         <td><?php echo $pedidos['telefone'];?></td>
                         
                         <td class="font"><?php echo $cliente['nome'];?></td>
-                        <td class="font"><?php echo $mensagem['quantidade'];?></td>
+                        <td class="font"><?php echo $pedidos['quantidade'];?></td>
                     </tr>
 
                 <?php
