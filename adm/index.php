@@ -24,27 +24,8 @@
             $_SESSION['usuario_ativo'] = $usuario['id_adm'];
             header("location:index_adm.php");  
         }else{
-<<<<<<< HEAD
-            if(password_verify($senha, $usuario['senha'])){
-                if(!isset($_SESSION)){
-                    
-                          
-                    $_SESSION['adm_ativo'] = $usuario['login'];
-                    header("location:index_adm.php");
-        
-                    }elseif(isset($_SESSION)){
-                        
-                        $_SESSION['adm_ativo'] = $usuario['login'];
-                        header("location:index_adm.php");
-                    }
-                }else{
-                    echo "Falha ao logar! login ou senha incorreto";
-                }
-            }
-=======
             $_SESSION['msg'] = "<div class='alert alert-danger'>Usuário ou senha incorreto!</div>";
         }
->>>>>>> Mestre_Jedi
     }    
     
 ?>
