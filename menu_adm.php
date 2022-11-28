@@ -1,25 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <a href="index.php">
-          <!-- <img src="../imagens/logo_senac.jpg.crdownload" alt="" width="100px" height="100px"> -->
-          <img src="../icone/senac_logo.svg" alt="" class="img-fluid" width="100px" height="100px">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="col">
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav ">
-            <a class="btn btn-primary d-flex " href="index_adm.php">Painel administrativo</a>
-          </ul>
-        </div>  
-      </div>
-      <div class="col">
-        <a class="btn btn-danger d-flex " href="sair.php">Sair</a>
-      </div>
-    </div>    
-  </div>
-</nav>
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="index_adm.php" class="d-flex align-items-center justify-content-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="../icone/senac_logo.svg" alt="" class="img-fluid w-50 p-3" >
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="index_adm.php" class="nav-link px-2 link-secondary">Início</a></li>
+      <li><a href="consultar_produtos.php" class="nav-link px-2 link-dark">Produtos</a></li>
+      <li><a href="consultar_pedidos.php" class="nav-link px-2 link-dark">Pedidos</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      
+      <a class="btn btn-danger me-2" href="sair.php">Sair</a>
+    </div>
+  </header>
+</div>

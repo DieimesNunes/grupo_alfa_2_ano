@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php 
-include('menu_adm.php');
-include('../icon.php');
-=======
 <?php
     require("autenticacao.php");
     include('../menu_adm.php');    
->>>>>>> Mestre_Jedi
 ?>
 
 <!DOCTYPE html>

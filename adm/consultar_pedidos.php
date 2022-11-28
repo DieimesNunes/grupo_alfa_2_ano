@@ -1,13 +1,6 @@
 <?php 
-    
-
     include("../conexao.php");
-<<<<<<< HEAD
-    include("menu_adm.php");
-    include("../icon.php");
-=======
     include ("../menu_adm.php");
->>>>>>> Mestre_Jedi
 
     if(!isset($_SESSION)){
         session_start();
@@ -22,6 +15,12 @@
         $quantidade_pedidos = $consulta_pedidos -> num_rows;
        // $data_pedido = $consulta_data_sql -> fetch_assoc() ;        
     }else{
+        $sql_pedidos = "SELECT * FROM tabela_pedidos";        
+        $consulta_pedidos = $mysqli->query($sql_pedidos) or die ($mysqli->error);
+        $quantidade_pedidos = $consulta_pedidos -> num_rows;
+    }
+
+    if(isset($_POST['bt_atualizar'])){
         $sql_pedidos = "SELECT * FROM tabela_pedidos";        
         $consulta_pedidos = $mysqli->query($sql_pedidos) or die ($mysqli->error);
         $quantidade_pedidos = $consulta_pedidos -> num_rows;
@@ -42,13 +41,19 @@
         <div class="container"> 
             <br>
             <br>
-            <form action="" method="POST">
-                <div class="mb-3">
-                    <label class="form-label" for="">Data dos pedidos: </label>
-                    <input type="date" name="bt_data">
-                    <input class="btn btn-primary" type="submit" value="Buscar">
+            <div class="row align-items-center justify-content-center justify-content-md-between text-center">
+                <div class="col-11">
+                    <form action="" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label" for="">Data dos pedidos: </label>
+                            <input type="date" name="bt_data">
+                            <input class="btn btn-primary" type="submit" value="Buscar">
+                            <button class="btn btn-primary" name="bt_atualizar">Atualizar</button>
+                        </div>                
+                    </form>
                 </div>                
-            </form>
+            </div>            
+           
             <table class="table">
                 <thead>
                     <tr>
