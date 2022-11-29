@@ -1,4 +1,4 @@
-<?php
+    <?php
     require("autenticacao.php");
     include('../menu_adm.php');    
 ?>
