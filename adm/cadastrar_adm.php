@@ -1,5 +1,6 @@
 <?php
     include("../conexao.php");
+    include("../menu_adm.php");
 
     if(isset($_POST['bt_senha'])){
         $senha1 = $_POST['bt_senha'];
@@ -60,7 +61,7 @@
                                 <br>
                                 <input class="form-control" type="password" placeholder="Digite novamente a sua senha" name="bt_senha_2" required>
                             </div>                                 
-                        <input class="btn btn-dark" type="submit" value="Cadastrar">
+                        <input class="btn btn-success" type="submit" value="Cadastrar">
                         <input class="btn btn-outline-dark" type="reset" value="Cancelar">
                         <?php
                             if(isset($_SESSION['msg'])){

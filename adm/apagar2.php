@@ -1,6 +1,6 @@
 <?php
     include("../conexao.php");
-    include("menu_adm.php");
+    include("../menu_adm.php");
 
     $id_mensagem = intval($_GET["id"]);
     $sql_mensagens = "SELECT * FROM tabela_produtos WHERE id_lanche = '$id_mensagem'";
@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="style_apagar.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -54,11 +54,11 @@
                 </tbody>
                 
             </table>
-            <form action="" method="post">
+            <form action="" method="post" class="text-center">
                     <h3>Tem certeza que deseja apagar ? </h3>
                     <button name="confirmar" value="1" class="btn btn-danger">Sim</button>
-                    <a href="apagar_produtos.php" class="btn btn-default">Não</a>            
-                </form>
+                    <a href="apagar_produtos.php" class="btn btn-primary">Não</a>            
+            </form>
             <?php 
             }else{
                 echo "Mensagem apagada com sucesso <br>";      

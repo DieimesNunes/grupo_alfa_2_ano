@@ -1,6 +1,6 @@
 <?php
     require("autenticacao.php");
-    include('../menu_adm.php');
+    include("../menu_adm.php");
     include("../conexao.php");
     
     $adm_sql = "SELECT * FROM adm";

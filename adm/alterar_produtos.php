@@ -2,7 +2,7 @@
     
 
     include("../conexao.php");
-    include("menu_adm.php");
+    include("../menu_adm.php");
     include("../icon.php");
 
     if(!isset($_SESSION)){
@@ -58,7 +58,7 @@
         
             <form action="" method="post">
                 <input  class="btn btn-primary" type="submit"  value="Atualizar" />
-                <a href="index_adm.php"><input class="btn btn-primary" type="button" value="Votar"></a>
+                
                 
                 <?php
                     if(isset($_SESSION['resultado'])){
@@ -106,7 +106,7 @@
                             </td>
                             <td class="font"><?php echo $mensagem['preco'];?></td>
                             <td class="sss">                               
-                                <a href="alterar.php?id=<?php echo $mensagem['id_lanche'];?>"><input class="btn btn-primary"  type="button" value="alterar">  </a>      
+                                <a href="alterar.php?id=<?php echo $mensagem['id_lanche'];?>"><input class="btn btn-warning"  type="button" value="Alterar">  </a>      
                             </td>
 
                             

@@ -1,6 +1,6 @@
 <?php
     include ("../conexao.php");
-    include("menu_adm.php");
+    include("../menu_adm.php");
 
     $foi = true;
 
@@ -33,7 +33,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <title>Naruto - Contato</title>
+        <title>Alteração - Produto</title>
     </head>
     <body>
         
@@ -42,33 +42,39 @@
             <h1>Entre em contato:</h1>
             <form action="" method="post">
                 <div class="form-group">
-                    <label>Nome:</label>
-                    <input value="<?php echo $mensagem['nome']?>" name="nome" required type="text" class="form-control">
-
-                    <label>Quantidade:</label>
-                    <input value="<?php echo $mensagem['quantidade']?>" name="quantidade" required type="number" class="form-control">
-
-                    <label>Arquivo:</label>
-                    <input value="<?php echo $mensagem['arquivo']?>" name="arquivo" required type="text" class="form-control">
-
-                    <label>Descrição:</label>
-                    <input value="<?php echo $mensagem['descricao']?>" name="descricao" required type="tex" class="form-control">
-
-                    <label>Preço:</label>
-                    <input value="<?php echo $mensagem['preco']?>" name="preco" required type="text" class="form-control">
+                    <div class="mb-3">
+                        <label class="form-label">Nome:</label>
+                        <input value="<?php echo $mensagem['nome']?>" name="nome" required type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Quantidade:</label>
+                        <input value="<?php echo $mensagem['quantidade']?>" name="quantidade" required type="number" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Arquivo:</label>
+                        <input value="<?php echo $mensagem['arquivo']?>" name="arquivo" required type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Descrição:</label>
+                        <input value="<?php echo $mensagem['descricao']?>" name="descricao" required type="tex" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Preço:</label>
+                        <input value="<?php echo $mensagem['preco']?>" name="preco" required type="text" class="form-control">
+                    </div>
                 </div>            
                   
+                <button name="envio" type="submit" class="btn btn-warning">Alterar</button>
+                <a href="alterar_produtos.php" class="btn btn-primary" >Cancelar</a>
                 
-                <button name="envio" type="submit" class="btn btn-default">Enviar</button>
-                <button type="reset" class="btn btn-default">Limpar</button>
             </form>
             <?php
             if($foi == false){
             if($deucerto){
-                echo "<h2>Mensagem atualizado com sucesso.</h2>";
+                echo "<h2>Produto atualizado com sucesso.</h2>";
                 unset($_POST);            
         ?>
-                 <a href="alterar_produtos.php"><button type="reset" class="btn btn-default">Voltar</button></a>
+                 <a href="alterar_produtos.php"><button type="reset" class="btn btn-primary">Voltar</button></a>
         <?php
             }}
         ?>

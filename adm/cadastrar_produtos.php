@@ -1,6 +1,6 @@
 <?php
     include("../conexao.php");
-    include("menu_adm.php");
+    include("../menu_adm.php");
 
     if(isset($_POST['bt_name'])){
         $arquivo= $_FILES['bt_arquivo'];    
@@ -94,18 +94,10 @@
                     </textarea>
                     
                 </div>
-                <div class="mb-3">
-                    
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <button type="reset"  class="btn btn-danger">Limpar</button>
-
-                <button type="submit" class="btn btn-outline-primary"><a href="index_adm.php" class="link">Voltar</a></button>
-                <img src="" alt="">
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="reset"  class="btn btn-primary">Limpar</button>                
             </form>
-        </div>
-        
+        </div>        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>
 </html>
