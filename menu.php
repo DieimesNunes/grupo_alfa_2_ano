@@ -6,30 +6,16 @@
 
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a href="index.php">
-          <img src="imagens/logo_senac.jpg.crdownload" alt="" width="100px" height="100px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              
-            </ul>
-          </div> 
-          <?php
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="index_adm.php" class="d-flex align-items-center justify-content-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="icone/senac_logo.svg" alt="" class="img-fluid w-50 p-3" >
+    </a>
 
-            if(isset($_SESSION["adm_ativo"])){
-                echo "teste";
-          ?>
-              <button type="button" class="btn btn-primary">Primary</button>
-          <?php
-              
-            }            
 
-          ?>   
-              
-          </div>
-</nav>
+    <div class="col-md-3 text-end">
+      
+
+    </div>
+  </header>
+</div>

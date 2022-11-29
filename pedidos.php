@@ -1,6 +1,6 @@
 <?php
     include("conexao.php");
-    require("autenticacao.php");
+    //require("adm/autenticacao.php");
     include("menu.php");
 
 

@@ -43,8 +43,8 @@
                                     <tr>
                                         <td><?php echo $adm['nome']; ?></td> 
                                         <td>
-                                            <a class="btn btn-default" href="#" role="button"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
-                                            <a class="btn btn-default" href="#" role="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Deletar</a>
+                                            <a class="btn btn-warning" href="alterar_adm.php?id_adm=<?php echo $adm['id_adm']?>" role="button"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
+                                            <a class="btn btn-danger" href="apagar_adm?id_adm=<?php echo $adm['id_adm'] ?>" role="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Deletar</a>
                                         </td>
                                     </tr> 
 

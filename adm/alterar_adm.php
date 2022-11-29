@@ -11,7 +11,7 @@
     }
   
 
-    $sql_mensagens = "SELECT * FROM tabela_produtos";
+    $sql_mensagens = "SELECT * FROM adm";
 
     $consulta_mensagens = $mysqli->query ( $sql_mensagens) or die ($mysqli->error);
 
@@ -58,7 +58,6 @@
         <div class="container pdg">
         
             <form action="" method="post">
-                <input  class="btn btn-primary" type="submit"  value="Atualizar" />
                 
                 
                 <?php
@@ -71,11 +70,12 @@
                 <table class="table shesh">
                     <thead>
                         <tr>
-                            <th scope="col" class="table-light">Consultar</th>
-                            <th scope="col" class="table-light">Arquivo Foto</th>
-                            <th scope="col" class="table-light">Descrição</th>
-                            <th scope="col" class="table-light">Preço</th>
-                            <th scope="col" class="table-light text">Apagar</th>
+                            <th scope="col" class="table-light">Id_adm</th>
+                            <th scope="col" class="table-light">nome</th>
+                            <th scope="col" class="table-light">login</th>
+                            <th scope="col" class="table-light">senha</th>
+                            <th scope="col" class="table-light">ações</th>
+                        
                         </tr>
                     </thead>        
                     <tbody>
@@ -94,20 +94,18 @@
                                     
                                                                     
                                     $contador = $contador + 1;
-                                    $name_btn["$contador"] = $mensagem['id_lanche'];
-                                    $img = $voltar.$mensagem['arquivo'];                
+                                    $name_btn["$contador"] = $mensagem['id_adm'];
+                                                
                         ?>
                         <tr>
-                            <th scope="row"><?php echo $mensagem['nome'];?></th>
-                            <td><a target="_blank" href="<?php echo $img ?>"><?php echo $mensagem['arquivo']; ?></a></td>
+                            <th scope="row"><?php echo $mensagem['id_adm'];?></th>
+                            <td><?php echo $mensagem['nome']; ?></td>
                             <td> 
-                                <div class="caixa">
-                                    <?php echo $mensagem['descricao'];?>
-                                </div>
+                                    <?php echo $mensagem['login'];?>
                             </td>
-                            <td class="font"><?php echo $mensagem['preco'];?></td>
+                            <td ><?php echo $mensagem['senha'];?></td>
                             <td class="sss">                               
-                                <a href="alterar.php?id=<?php echo $mensagem['id_lanche'];?>"><input class="btn btn-warning"  type="button" value="Alterar">  </a>      
+                                <a href="alterar_adms.php?id=<?php echo $mensagem['id_adm'];?>"><input class="btn btn-warning"  type="button" value="Alterar">  </a>      
                             </td>
 
                             
